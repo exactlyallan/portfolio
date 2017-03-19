@@ -1,0 +1,148 @@
+/* Resume CSS allanenemark.com */
+
+body {
+    background-color: #f1f1f1;
+    font-size: 15px;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dc5858;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    color: gray;
+    background-color: white;
+    padding: 5% 5% 5% 3%;
+    margin: 2% auto;
+}
+
+.row {
+    margin-bottom: 3.5rem;
+}
+
+.res-name {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    text-align: right;
+    color: #dc5858;
+}
+
+.res-title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    padding-right: 7.9rem;
+}
+
+.res-contact {
+    margin-top: -1rem;
+    font-size: 1.8rem;
+}
+
+.section-title {
+    font-size: 3.0rem;
+    margin-bottom: 0.0rem;
+    margin-top: -0.4rem;
+    text-align: right;
+}
+
+.res-place {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.0rem;
+}
+
+.res-date {
+    font-size: 1.7rem;
+}
+
+.res-descritption {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style: disc outside;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 1em;
+}
+
+li {
+    line-height: 2.0rem;
+    margin-bottom: 0.7rem;
+}
+
+.res-skill {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 639px) {
+    .row {
+        margin-bottom: 0.5rem;
+    }
+    ul {
+        list-style: none;
+    }
+    .res-title {
+        font-size: 2.0rem;
+    }
+    .res-name {
+        border-bottom: 2px solid #dc5858;
+        text-align: left;
+    }
+    .section-title {
+        border-top: 2px solid #e1e1e1;
+        margin-top: 3rem;
+        text-align: left;
+    }
+}
+
+@media print {
+    body {
+        font-size: 10px;
+        background-color: white;
+    }
+    .row {
+        margin-bottom: 1.0rem;
+    }
+    ul {
+        list-style: none;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    li {
+        line-height: 1.0rem;
+        margin-bottom: 0.3rem;
+    }
+    .section-title {
+        border-top: none;
+        font-size: 2.2rem;
+    }
+    .res-place {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.0rem;
+    }
+    .res-date {
+        font-size: 1.2rem;
+    }
+    .res-descritption {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .res-skill {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}

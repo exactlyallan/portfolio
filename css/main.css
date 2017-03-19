@@ -1,0 +1,274 @@
+/* Main CSS allanenemark.com */
+/* Maybe should have used SASS, but eh, not much css tbh */
+
+body {
+    color: white;
+}
+
+#header {
+    position: relative;
+}
+
+#top-viz {
+    position: relative;
+    z-index: 10;
+}
+
+#top-text-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+#top-text {
+    position: relative;
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+    font-size: 6em;
+    text-align: center;
+    top: 26%;
+    color: white;
+    cursor: default;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#down-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    font-size: 3.5em;
+    text-align: center;
+    width: 100%;
+}
+
+.contact {
+    cursor: pointer;
+    display: block;
+    margin: 20px 0px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px white solid;
+}
+
+.contact:hover {
+    color: #eaeaea;
+    border-bottom: 3px #eaeaea dotted;
+}
+
+section {
+    position: relative;
+    padding: 15% 0 7% 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+section:last-of-type {
+    position: relative;
+    padding: 13% 0 2% 0;
+}
+
+.head-line {
+    margin-bottom: 8%;
+    border-top: 6px white solid;
+}
+
+.head-line:last-of-type {
+    margin-top: 10%;
+    margin-bottom: 8%;
+    border-top: 6px white solid;
+}
+
+.head-line-text {
+    position: absolute;
+    font-size: 1.3em;
+    font-variant: small-caps;
+}
+
+.title-section {
+    min-height: 300px;
+}
+
+.big-text {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+    font-size: 5.5em;
+    line-height: 1em;
+    margin-top: -4%;
+}
+
+.base-line {
+    cursor: pointer;
+    position: relative;
+    border-bottom: 3px white solid;
+    font-size: 1.1em;
+    font-variant: small-caps;
+    top: -7px;
+    background-color: inherit;
+}
+
+video {
+    cursor: pointer;
+}
+
+.vid-status {
+    margin: -.5rem 0 1rem 0;
+    font-variant: small-caps;
+}
+
+.detail-link {
+    z-index: 55;
+    cursor: pointer;
+    position: absolute;
+    font-variant: small-caps;
+    top: 5px;
+}
+
+.detail-link:hover {
+    color: #eaeaea;
+}
+
+.base-line-low {
+    position: relative;
+    top: -10px;
+    border-top: 3px white solid;
+    height: 40px;
+    background-color: inherit;
+}
+
+.desc-text {
+    line-height: 1.9em;
+    font-size: 1em;
+}
+
+.img-section {
+    position: relative;
+}
+
+.more-section {
+    display: none;
+    padding-top: 40px;
+}
+
+.press-list {
+    color: white;
+    text-decoration: none;
+    border-bottom: 3px white solid;
+}
+
+.press-list:hover {
+    color: #eaeaea;
+    border-bottom: 3px #eaeaea dotted;
+}
+
+.press-title {
+    font-size: 1.1em;
+}
+
+.misc-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.sub-text {
+    color: white;
+    text-decoration: none;
+    margin: -2px 0px 30px 0px;
+    border-top: 3px #eaeaea solid;
+}
+
+.misc-link:hover .sub-text,
+a .sub-text:hover {
+    color: #eaeaea;
+    border-top: 3px #eaeaea dotted;
+}
+
+.misc-link:hover {
+    color: #eaeaea;
+}
+
+.footer {
+    display: inline-block;
+}
+
+#stardate {
+    font-size: .7em;
+}
+
+
+/** helper **/
+
+.full-image {
+    width: 100%;
+    height: 100%;
+}
+
+.numbers {
+    font-size: 1em;
+    line-height: 2.4em;
+}
+
+.emphisis {
+    font-size: 1.3em;
+    font-variant: small-caps;
+}
+
+.left {
+    left: 0px;
+}
+
+.right {
+    right: 0px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 3%;
+}
+
+
+/*** css3 transitions ***/
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.transition {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+
+/*** Media Queries ***/
+
+@media (max-width: 640px) {
+    .big-text {
+        margin-right: 20%;
+        margin-top: 0;
+        line-height: 0.9em;
+    }
+    #down-arrow {
+        font-size: 1.6em;
+    }
+    .desc-text {
+        margin-top: 0;
+    }
+    .left {
+        left: 20px;
+    }
+    .right {
+        right: 20px;
+    }
+}
