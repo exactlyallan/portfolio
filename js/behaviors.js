@@ -1,7 +1,6 @@
 // Javascript allanenemark.com
 // Interaction and custom behaviors
-console.log("(ಠ_ಠ)");
-
+console.log("(ಠ_ಠ) Yes, jQuery. Ping me if you want to know my reasons for not using React or something...");
 
 
 // Get Time
@@ -10,6 +9,8 @@ var nowHour = dates.getHours();
 var nowYear = dates.getFullYear();
 $('#stardate').text(nowYear); // set copyright
 
+
+//// COLORS
 
 // Global Standard Color
 var colorSet = ['dc8333', 'dc5858', '67a1d4', 'dc5858'];
@@ -47,72 +48,6 @@ function setBaseColor() {
     return returnColorSet;
 
 }
-
-
-// FitText
-// https://github.com/davatron5000/FitText.js
-$('#top-text').fitText(0.8);
-$('.big-text').fitText(0.5);
-
-
-// Down Arrow ScrollTo
-$('#down-arrow').click(function(){
-
-    $('html, body').animate({
-        scrollTop: $("#welcome-text").offset().top-150, easing: 'easeInOutQuart'
-    }, 1000);
-
-})
-
-
-// lazyLoad
-// http://www.appelsiini.net/projects/lazyload
-$('img.lazy').lazyload({
-    effect : "fadeIn"
-});
-
-
-
-// video play/pause & start fallback
-$('.vid').click(function(){
-    if($(this).get(0).paused){
-        $(this).get(0).play();
-    } else {
-        $(this).next().html('video paused');
-        $(this).get(0).pause();
-    }
-})
-
-// remove loading status event listener
-$('.vid').on('canplay', function() {
-    $(this).next().html('video ready');
-});
-
-// add playing status
-$('.vid').on('play', function() {
-    if($(this).get(0).networkState == 2 ){
-        $(this).next().html('video loading...');
-    } else {
-        $(this).next().html('video ready');
-    }
-});
-
-
-// Show More Click Event
-$('.base-line').click(function(event) {
-    $(this).next('.more-section').stop().slideToggle({ duration: 1200, easing: 'easeInOutQuart' });
-
-    // eh, its messy but it works
-    var eventTarget = $(event.target).context.firstElementChild;
-
-    if ($(eventTarget).hasClass('flip')) {
-        $(eventTarget).removeClass('flip')
-    } else {
-        $(eventTarget).addClass('flip');
-    }
-
-});
-
 
 // Darken BG per section
 // Base Color used in header viz and gradient background
@@ -155,3 +90,64 @@ function LightenDarkenColor(col, amt) {
     return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
 
 }
+
+
+//// EVENTS
+
+// B-Lazy Load
+var bLazy = new Blazy({ 
+        loadInvisible: true
+});
+
+
+// Click Video to Play / Pause
+$('.vid').click(function(){
+    if($(this).get(0).paused){
+        $(this).get(0).play();
+    } else {
+        $(this).get(0).pause();
+    }
+})
+
+// Down Arrow ScrollTo
+$('#down-arrow').click(function(){
+    $('html, body').animate({
+        scrollTop: $("#welcome-text").offset().top-150, easing: 'easeInOutQuart'
+    }, 1000);
+})
+
+
+// Show More Click Event
+$('.open-detail').click(function(event) {
+    
+    var idmore = '#' + $(this).data('open') + '-more';
+    var idchev = '#' + $(this).data('open') + '-chev';
+
+    $(idmore).stop().slideToggle({ duration: 1200, easing: 'easeInOutQuart' });
+
+    if ($(idchev).hasClass('flip')) {
+        $(idchev).removeClass('flip')
+    } else {
+        $(idchev).addClass('flip');
+    }
+
+});
+
+// Close More Click Event
+$('.close-detail').click(function(event){
+
+    var idmore = '#' + $(this).data('open') + '-more';
+    var idchev = '#' + $(this).data('open') + '-chev';
+
+    $(idmore).stop().slideUp({ duration: 1200, easing: 'easeInOutQuart' });
+
+    if ($(idchev).hasClass('flip')) {
+        $(idchev).removeClass('flip')
+    } else {
+        $(idchev).addClass('flip');
+    }
+
+});
+
+
+//// EOF
