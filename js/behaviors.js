@@ -116,6 +116,17 @@ $('#down-arrow').click(function(){
     }, 1000);
 })
 
+// Nav ScrollTo
+$('.nav-link').click(function(event){
+    event.preventDefault()
+    var sec = $(this).attr('href')
+    var distance = $(sec).offset().top-150;
+    var time = distance * 0.4
+    $('html, body').animate({
+        scrollTop: distance, easing: 'easeInOutCubic'
+    }, time);
+})
+
 
 // Show More Click Event
 $('.open-detail').click(function(event) {

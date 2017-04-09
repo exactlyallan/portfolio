@@ -1,9 +1,10 @@
 /* Main CSS allanenemark.com */
 /* Maybe should have used SASS, but eh, not much css tbh */
 
-html, body {
+html,
+body {
     color: white;
-    background-color: gray;
+    background-color: #cfcfd0;
 }
 
 #header {
@@ -47,18 +48,29 @@ html, body {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-.nav-text:hover {
-    color: #eaeaea;
-    border-bottom: 2px #eaeaea dotted;
-}
-
 #down-arrow {
     cursor: pointer;
     position: relative;
-    top: -1.2em;   
+    top: -1.2em;
     font-size: 3.5em;
     text-align: center;
     width: 100%;
+}
+
+.nav-list {
+    margin-top: 1em;
+    list-style: none;
+    line-height: 1em;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #eaeaea;
+    border-bottom: 2px #eaeaea dotted;
 }
 
 .contact {
@@ -104,16 +116,13 @@ section:last-of-type {
     font-variant: small-caps;
 }
 
-.title-section {
-    min-height: 300px;
-}
-
 .big-text {
     font-family: 'Yantramanav', sans-serif;
     font-weight: 100;
     font-size: 5vw;
     line-height: 1em;
-    margin-top: -4%;
+    margin-top: -0.1em;
+    margin-bottom: 0;
 }
 
 .open-detail {
@@ -130,7 +139,6 @@ section:last-of-type {
 
 video {
     cursor: pointer;
-    margin-bottom: 5em;
 }
 
 .detail-link {
@@ -145,9 +153,12 @@ video {
 }
 
 .close-detail {
+    font-variant: small-caps;
+    font-size: 1.2em;
     cursor: pointer;
     position: relative;
-    top: -3em;
+    margin-top: 3em;
+    top: -2.2em;
     text-align: right;
 }
 
@@ -166,16 +177,17 @@ video {
 .head-line-more {
     width: 100%;
     line-height: 1.1em;
-    margin-bottom: 0.4em;
+    margin-top: 1.3em;
+    margin-bottom: 0.2em;
     font-size: 1.3em;
     font-variant: small-caps;
     border-bottom: 1px solid white;
 }
 
 .desc-text {
-    line-height: 1.9em;
+    line-height: 1.7em;
     font-size: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
 }
 
 .img-section {
@@ -184,13 +196,13 @@ video {
 
 .more-section {
     display: none;
-    padding-top: 3em;
 }
 
 .box-spacer {
+    font-size: 1.7em;
     width: 100%;
     text-align: center;
-    margin: 40% 0 40% 0;
+    margin: 20% 0 20% 0;
 }
 
 .press-list {
@@ -223,20 +235,6 @@ video {
     text-decoration: none;
     margin: -2px 0px 30px 0px;
     border-top: 1px #eaeaea solid;
-}
-
-.misc-link:hover .sub-text,
-a .sub-text:hover {
-    color: #eaeaea;
-    border-top: 1px #eaeaea dotted;
-}
-
-.misc-link:hover {
-    color: #eaeaea;
-}
-
-.footer {
-    display: inline-block;
 }
 
 #stardate {
@@ -275,10 +273,6 @@ a .sub-text:hover {
 
 .float-right {
     float: right;
-}
-
-.margin-bottom-30 {
-    margin-bottom: 3%;
 }
 
 
