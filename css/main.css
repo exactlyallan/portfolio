@@ -8,13 +8,31 @@ body {
 }
 
 #header {
+    display: none;
     position: relative;
+}
+
+#header-text {
+   position: relative;
+   top: 25%;
+   width: 100%;
+   height: auto;
 }
 
 #top-viz {
     position: relative;
     z-index: 10;
 }
+
+#top-svg {
+    position: absolute;
+    width: 60%;
+    height: auto;
+    top: 30%;
+    left: 50%;
+    margin-left: -30%;
+}
+
 
 #top-text-bg {
     position: absolute;
@@ -112,6 +130,7 @@ section:last-of-type {
 
 .head-line-text {
     position: absolute;
+    margin-top: -0.3em;
     font-size: 1.3em;
     font-variant: small-caps;
 }
@@ -244,14 +263,19 @@ video {
 
 /** helper **/
 
+.loading{
+    padding: 5em;
+}
+
 .full-image {
     width: 100%;
     height: 100%;
 }
 
 .numbers {
+    margin-top: -0.4em;
     font-size: 1em;
-    line-height: 2.4em;
+    line-height: 2.3em;
 }
 
 .emphisis {
@@ -295,12 +319,15 @@ video {
 
 @media (max-width: 640px) {
     .big-text {
+        font-size: 2.5em;
         margin-right: 20%;
-        margin-top: 0;
+        margin-top: 1em;
         line-height: 0.9em;
     }
     #down-arrow {
-        font-size: 1.6em;
+        font-size: 3em;
+        margin-top: 0.7em;
+        margin-bottom: -1em;
     }
     .base-line {
         background-color: inherit;
@@ -309,7 +336,7 @@ video {
         margin-top: 0;
     }
     .left {
-        left: 0px;
+        left: 20px;
     }
     .right {
         right: 20px;

@@ -125,6 +125,9 @@ li {
         line-height: 1.0rem;
         margin-bottom: 0.3rem;
     }
+    #welcome-text{
+        font-size: 3rem;
+    }
     .section-title {
         border-top: none;
         font-size: 2.2rem;
