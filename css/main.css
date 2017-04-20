@@ -156,10 +156,6 @@ section:last-of-type {
     bottom: 2.2em;
 }
 
-video {
-    cursor: pointer;
-}
-
 .detail-link {
     z-index: 55;
     cursor: pointer;

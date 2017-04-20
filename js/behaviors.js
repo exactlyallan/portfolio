@@ -102,18 +102,10 @@ var bLazy = new Blazy({
         loadInvisible: true
 });
 
+
 // Featherlight box
 $.featherlight.defaults.loading = '<img class="loading" src="./img/squares.gif">';
 
-
-// Click Video to Play / Pause
-$('.vid').click(function(){
-    if($(this).get(0).paused){
-        $(this).get(0).play();
-    } else {
-        $(this).get(0).pause();
-    }
-})
 
 // Down Arrow ScrollTo
 $('#down-arrow').click(function(){
@@ -140,8 +132,6 @@ $('.open-detail').click(function(event) {
     var idmore = '#' + $(this).data('open') + '-more';
     var idchev = '#' + $(this).data('open') + '-chev';
     var idshow = '#' + $(this).data('open') + '-show';
-
-    console.log(idshow)
 
     $(idmore).stop().slideToggle({ duration: 1200, easing: 'easeInOutQuart' });
 
