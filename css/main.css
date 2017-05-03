@@ -91,6 +91,16 @@ body {
     border-bottom: 2px #eaeaea dotted;
 }
 
+.about-link {
+    text-decoration: none;
+    color: white;
+}
+
+.about-link:hover {
+    color: #eaeaea;
+    border-bottom: 2px #eaeaea dotted;
+}
+
 .contact {
     cursor: pointer;
     display: block;

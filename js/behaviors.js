@@ -141,8 +141,6 @@ $('.open-detail').click(function(event) {
     var idchev = '#' + $(this).data('open') + '-chev';
     var idshow = '#' + $(this).data('open') + '-show';
 
-    console.log(idshow)
-
     $(idmore).stop().slideToggle({ duration: 1200, easing: 'easeInOutQuart' });
 
     if ($(idchev).hasClass('flip')) {
